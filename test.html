@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Project </title>
+	<style>
+		body {
+			margin: 0px;
+		}
+
+		p {
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+
+		img {
+			float: right;
+			transform: translateY(-3rem);
+			margin-right: 3rem;
+		}
+
+		.header {
+			/*background: linear-gradient( 180deg, #0AE106 25%, #026D13 100%), #0AE106;
+			border: 1px solid #1ABD00;
+			*/
+			background-image: url('header-img.svg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			box-shadow: 0px 0px 0px rgb(0 0 0 / 25%);
+			height: 63px;
+			width: 100vw;
+		}
+
+		.manage-project {
+			height: 70px;
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0) 55.21%, #026D13 100%), rgba(242, 240, 240, 0.9);
+			opacity: 0.3;
+			box-shadow: 0px 4px 4px rgba(105, 105, 105, 0.75);
+			border-radius: 30px;
+			width: fit-content;
+			margin: auto;
+
+		}
+
+		.manage-project-text {
+			position: relative;
+			top: 45px;
+		}
+
+		.manage-project-text,
+		.manage-project p {
+			font-family: Inter;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 24px;
+			text-align: center;
+			color: #000000;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			width: fit-content;
+			margin: auto;
+		}
+
+		.manage-project p {
+			opacity: 0;
+		}
+
+		.actions {
+			background: rgba(242, 240, 240, 0.9);
+			opacity: 0.3;
+			box-shadow: 0px 4px 4px rgba(105, 105, 105, 0.75);
+			border-radius: 30px;
+			width: fit-content;
+			height: 51px;
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
+
+		.container {
+			padding: 2rem;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			width: calc(100vw - 4rem);
+			justify-content: space-evenly;
+			position: relative;
+			top: -6rem;
+		}
+
+		.action-text {
+			font-family: Inter;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 20px;
+			line-height: 24px;
+			text-align: center;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			color: #000000;
+		}
+
+		.t1 {
+			font-family: Inter;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 35px;
+			line-height: 42px;
+			color: #026D13;
+			text-shadow: 0px 4px 4px rgba(158, 157, 157, 0.25);
+		}
+
+		.t2 {
+			font-family: Inter;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 30px;
+			line-height: 36px;
+			color: #042109;
+		}
+
+		.actions .action-text {
+			opacity: 0;
+		}
+
+		.action-container {
+			width: 22rem;
+			text-align: unset;
+		}
+
+		.action .action-text {
+			position: relative;
+			top: 40px;
+		}
+
+		.action {
+			width: fit-content;
+			height: 4rem;
+		}
+
+		.action.left {
+			margin-left: auto;
+		}
+
+		.action.right {
+			margin-right: auto;
+		}
+
+		.form-container {
+			background: linear-gradient(180deg, #FFFFFF 89.06%, rgba(255, 255, 255, 0) 100%), rgba(75, 220, 51, 0.85);
+			box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+			border-radius: 30px;
+			margin-top: 2.5em;
+		}
+
+		.page-head {
+			margin-left: 3rem;
+		}
+
+		.page-container {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+		}
+
+		.collect {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			padding: 1rem;
+		}
+
+		.form-container {
+			padding: 2rem;
+		}
+
+		.size-of-company {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+		}
+
+		.size-of-company-label {
+			margin-bottom: 0.25rem;
+		}
+
+		.size-of-company input {
+			margin-right: 0.25rem;
+			margin-left: 1rem;
+			line-height: 1.25rem;
+		}
+
+		.collect input {
+			background-color: transparent;
+			border-top: 0px;
+			border-left: 0px;
+			border-right: 0px;
+			margin-top: 0.25rem;
+			margin-bottom: 1rem;
+			line-height: 1.25rem;
+		}
+
+		.collect input :focus {
+			border-top: 0px;
+			border-left: 0px;
+			border-right: 0px;
+		}
+
+			.collect input:focus-visible {
+			border-top: 0px;
+			border-left: 0px;
+			border-right: 0px;
+		}
+
+		.form-container p {
+			font-family: Arimo;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 20px;
+			line-height: 23px;
+			color: #026D13;
+			text-shadow: 0px 2px 2px #A0A0A0;
+			padding-left: 1rem;
+			margin-bottom: 2rem;
+		}
+
+		.action-brace-container {
+			width: 30rem;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+		}
+
+		.curly-brace {
+			background-image: url('curly-brace.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 3rem;
+			margin-top: 2rem;
+		}
+
+		.submit-button {
+			background: linear-gradient( rgba(75, 220, 51, 0.8) 100%, rgba(75, 220, 51, 1));
+			height: 2rem;
+			border: none;
+			border-radius: 10px;
+			width: 10rem;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="header">
+	</div>
+	<img src="logo.png">
+	<div class="page-head">
+		<p class="t1">
+			Do you want to?
+		</p>
+		<p class="t2">
+			Transform your construction business from</p>
+		<p class="t2">Pen and Paper to a digital tool.</p>
+	</div>
+	<div class="container">
+
+		<div>
+			<p class="manage-project-text">Manage your project - Whenever and Wherever you want</p>
+			<div class="manage-project">
+				<p>Manage your project - Whenever and Wherever you want</p>
+			</div>
+		</div>
+
+		<div class="page-container">
+			<div class="action-brace-container">
+				<div class="action-container">
+					<div class="action left">
+						<p class="action-text">Project management</p>
+						<div class="actions">
+							<p class="action-text text1">Project management</p>
+						</div>
+					</div>
+					<div class="action right">
+						<p class="action-text">Team management</p>
+						<div class="actions">
+							<p class="action-text">Team management</p>
+						</div>
+					</div>
+					<div class="action left">
+						<p class="action-text">Document management</p>
+						<div class="actions">
+							<p class="action-text">Document management</p>
+						</div>
+					</div>
+					<div class="action right">
+						<p class="action-text">BOQ + Indents</p>
+						<div class="actions">
+							<p class="action-text">BOQ + Indents</p>
+						</div>
+					</div>
+					<div class="action left">
+						<p class="action-text">Communications</p>
+						<div class="actions">
+							<p class="action-text">Communications</p>
+						</div>
+					</div>
+					<div class="action right">
+						<p class="action-text">Data Analytics</p>
+						<div class="actions">
+							<p class="action-text">Data Analytics</p>
+						</div>
+					</div>
+					<div class="action left">
+						<p class="action-text">Accounts + Finance</p>
+						<div class="actions">
+							<p class="action-text">Accounts + Finance</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="curly-brace">
+				</div>
+			</div>
+			<div>
+				<div class="form-container">
+					<p>Does this suit your company..? Ask us</p>
+					<form class="collect" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdx5W8linHsQ0IKoFalyAucx9VQjeugCmE7FZMskdZ0HFfNNA/formResponse">
+						<label>Name:</label>
+						<input type="text" name="entry.2092238618" placeholder="Name" size="50" size="50">
+						<label> Email:</label>
+						<input type="email" name="entry.1556369182" placeholder="Email" size="50">
+						<label> Mobile:</label>
+						<input type="number" name="entry.479301265" placeholder="Mobile No" size="50">
+						<label class="size-of-company-label">Size of company:</label>
+						<div class="size-of-company">
+							<input type="radio" id='0' name="entry.588393791" value="0-10"> 0-10
+							<input type="radio" id="10" name="entry.588393791" value="10-50"> 10-50
+							<input type="radio" id="50" name="entry.588393791" value="50"> 50+
+						</div>
+						<input class="submit-button" type="submit" value="Send" />
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<div>
+				<div>
+
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+</body>
+
+</html>
